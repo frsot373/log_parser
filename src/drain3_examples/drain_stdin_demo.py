@@ -22,7 +22,7 @@ persistence = FilePersistence(drain3_state_bin_file_path)
 config = TemplateMinerConfig()
 drain3_ini_file_path = os.path.join(CONFIG_DIR_PATH, "drain3.ini")
 config.load(drain3_ini_file_path)
-config.profiling_enabled = False
+config.profiling_enabled = True
 
 template_miner = TemplateMiner(persistence, config)
 print(f"{len(config.masking_instructions)} masking instructions are in use")
